@@ -1,8 +1,27 @@
 [package]
 name = "pusher-beam-rust"
+# When releasing to crates.io:
+# - Remove path dependencies
+# - Update html_root_url.
+# - Update doc url
+#   - Cargo.toml
+#   - README.md
+# - Update CHANGELOG.md.
+# - Create git tag.
 version = "0.1.0"
 authors = ["Tyr Chen <tyr.chen@gmail.com>"]
 edition = "2018"
+license = "MIT"
+documentation = "https://docs.rs/pusher-beam-rust/0.1.0/pusher-beam-rust/"
+repository = "https://github.com/tyrchen/pusher-beam-rust"
+homepage = "https://github.com/tyrchen/pusher-beam-rust"
+description = """
+Pusher BEAMS support for rust.
+"""
+readme = "../README.md"
+categories = ["sdk"]
+keywords = ["pusher"]
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
