@@ -29,7 +29,7 @@ impl PusherBeam {
         }
     }
 
-    pub async fn publish(self, payload: &Payload) -> Result<()>  {
+    pub async fn publish(&self, payload: &Payload) -> Result<()>  {
 
         println!("payload: {:?}", json!(payload));
 
@@ -44,7 +44,7 @@ impl PusherBeam {
     }
 
     // private function
-    fn build_client(self) -> reqwest::RequestBuilder {
+    fn build_client(&self) -> reqwest::RequestBuilder {
         let client = reqwest::Client::new();
         let url = format!("https://{}.pushnotifications.pusher.com/publish_api/v1/instances/{}/publishes", self.instance_id, self.instance_id);
         let mut headers = HeaderMap::new();
