@@ -12,13 +12,13 @@ pub struct PusherBeam {
 
 #[derive(Debug, Serialize)]
 pub struct Payload {
-    interests: Vec<String>,
+    pub interests: Vec<String>,
     #[serde(skip_serializing_if = "Value::is_null")]
-    web: Value,
+    pub web: Value,
     #[serde(skip_serializing_if = "Value::is_null")]
-    fcm: Value,
+    pub fcm: Value,
     #[serde(skip_serializing_if = "Value::is_null")]
-    apns: Value,
+    pub apns: Value,
 }
 
 impl PusherBeam {
